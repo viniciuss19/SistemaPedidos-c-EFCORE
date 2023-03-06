@@ -52,6 +52,7 @@ namespace Sistema_de_Pedidos.DB
                 p.HasKey(p => p.id);
                 p.Property(p => p.Status).HasConversion<string>();
                 p.Property(p => p.TipoFrete).HasConversion<string>();
+                p.Property(p => p.Observacao).HasColumnType("CHAR(30)");
             });
 
             modelBuilder.Entity<PedidoItem>(p =>
@@ -59,6 +60,8 @@ namespace Sistema_de_Pedidos.DB
                 p.ToTable("PedidoItem");
                 p.HasKey(p => p.Id);
                 p.Property(p => p.Quantidade).HasDefaultValue(1).IsRequired();
+                p.Property(p => p.Valor).IsRequired();
+                p.Property(p => p.Desconto).IsRequired();
             });
         }
     }

@@ -20,6 +20,7 @@ namespace Sistema_de_Pedidos.Domain
 
         public int Valor { get; set; }
 
+       
 
     }
 }

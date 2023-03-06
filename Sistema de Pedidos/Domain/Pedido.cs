@@ -18,7 +18,7 @@ namespace Sistema_de_Pedidos.Domain
 
         public TipoFrete TipoFrete { get; set; }
 
-        public string Obervacao { get; set; }
+        public string Observacao { get; set; }
 
         public ICollection<PedidoItem> Itens { get; set; }
         public StatusPedido Status { get; set; }
